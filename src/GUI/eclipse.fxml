@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 
@@ -11,5 +12,7 @@
       <Circle fx:id="crater1" fill="#35393c" layoutX="130.0" layoutY="88.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater2" fill="#515b61" layoutX="174.0" layoutY="104.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater3" fill="#7e8890" layoutX="130.0" layoutY="147.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="96.0" layoutY="300.0" mnemonicParsing="false" onAction="#left" text="Left" />
+      <Button layoutX="1077.0" layoutY="300.0" mnemonicParsing="false" onAction="#right" text="Right" />
    </children>
 </AnchorPane>

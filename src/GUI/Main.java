@@ -21,5 +21,5 @@ public class Main extends Application{
 		primaryStage.setTitle("Eclipse :: The dance of the sun and the moon");
 		primaryStage.show();
 	}
-
+	//cualquier
 }

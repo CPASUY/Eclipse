@@ -1,10 +1,10 @@
-package GUI;
+package gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
 
-public class eclipseGUI {
+public class EclipseGUI {
 
 	@FXML
 	private Circle sun;
@@ -22,7 +22,7 @@ public class eclipseGUI {
 	private Circle crater3;
 
 	
-	public eclipseGUI() {
+	public EclipseGUI() {
 		// TODO Auto-generated constructor stub
 	}
 	

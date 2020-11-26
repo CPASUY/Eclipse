@@ -31,7 +31,7 @@ public class EclipseG {
 	private Color color;
 	
 	public EclipseG() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	@FXML
     public void initialize() {

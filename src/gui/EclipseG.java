@@ -78,13 +78,15 @@ public class EclipseG {
     private Circle start15;
 
     @FXML
-    private Circle start18;
-
-    @FXML
     private Circle start16;
 
     @FXML
     private Circle start17;
+    
+    @FXML
+    private Circle start18;
+    
+    private Circle[] circles; 
     
 	
 	public EclipseG() {
@@ -93,6 +95,11 @@ public class EclipseG {
 	@FXML
     public void initialize() {
     	color = (Color)sky.getFill();
+    	Circle [] circles2 = {start1,start2,start3,start4,start5,start6,start7,start8,start9,start10,start11,start12,start13,start14,start15,start16,start17,start18};
+    	circles = circles2;
+    	for(int i = 0; i < circles.length;i++) {
+    		circles[i].setVisible(false);
+    	}
     }
     @FXML
     void left(ActionEvent event) {
@@ -113,6 +120,9 @@ public class EclipseG {
     	
     	if(newMoon.getxPositionMoon() >= sun.getLayoutX() && newMoon.getxPositionMoon() < sun.getLayoutX()+sun.getRadius()) {
     		color = color.darker();
+    		for(int i = 0; i < circles.length;i++) {
+        		circles[i].setVisible(true);
+        	}
     	}
     	else {
     		color = color.brighter();
@@ -140,6 +150,9 @@ public class EclipseG {
 
     	if(newMoon.getxPositionMoon() <= sun.getLayoutX() && newMoon.getxPositionMoon()>sun.getLayoutX()-sun.getRadius()) {
     		color = color.darker();
+    		for(int i = 0; i < circles.length;i++) {
+        		circles[i].setVisible(true);
+        	}
     	}
     	else {
     		color = color.brighter();

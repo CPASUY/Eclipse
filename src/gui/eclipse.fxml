@@ -16,6 +16,24 @@
       <Circle fx:id="crater2" fill="#636e72" layoutX="177.0" layoutY="119.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <Button layoutX="88.0" layoutY="290.0" mnemonicParsing="false" onAction="#left" text="moveLeft" />
       <Button layoutX="901.0" layoutY="290.0" mnemonicParsing="false" onAction="#right" text="moveRight" />
+      <Circle fx:id="start1" fill="WHITE" layoutX="310.0" layoutY="90.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start3" fill="WHITE" layoutX="186.0" layoutY="251.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start2" fill="WHITE" layoutX="328.0" layoutY="190.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start4" fill="WHITE" layoutX="150.0" layoutY="416.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start5" fill="WHITE" layoutX="301.0" layoutY="315.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start6" fill="WHITE" layoutX="468.0" layoutY="269.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start7" fill="WHITE" layoutX="435.0" layoutY="390.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start8" fill="WHITE" layoutX="598.0" layoutY="333.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start9" fill="WHITE" layoutX="644.0" layoutY="242.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start10" fill="WHITE" layoutX="712.0" layoutY="119.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start18" fill="WHITE" layoutX="819.0" layoutY="81.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start15" fill="WHITE" layoutX="801.0" layoutY="223.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start17" fill="WHITE" layoutX="938.0" layoutY="128.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start16" fill="WHITE" layoutX="892.0" layoutY="190.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start14" fill="WHITE" layoutX="783.0" layoutY="324.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start12" fill="WHITE" layoutX="920.0" layoutY="416.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start11" fill="WHITE" layoutX="712.0" layoutY="399.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="start13" fill="WHITE" layoutX="857.0" layoutY="381.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

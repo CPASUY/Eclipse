@@ -6,14 +6,16 @@ public class Moon {
 	double xPositionCrater1;
 	double xPositionCrater2;
 	double xPositionCrater3;
-	
+
 	public Moon(double xPositionMoon, double xPositionCrater1, double xPositionCrater2, double xPositionCrater3) {
 		this.xPositionMoon = xPositionMoon;
 		this.xPositionCrater1 = xPositionCrater1;
 		this.xPositionCrater2 = xPositionCrater2;
 		this.xPositionCrater3 = xPositionCrater3;
 	}
-	
+	public double getxPositionMoon() {
+		return xPositionMoon;
+	}
 	public void moveRight() {
 		xPositionMoon += 10;
 		xPositionCrater1 += 10;

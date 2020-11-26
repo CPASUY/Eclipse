@@ -86,7 +86,9 @@ public class EclipseG {
     @FXML
     private Circle start18;
     
-    private Circle[] circles; 
+    private Circle[] circles;
+    
+    private boolean twinkle;
     
 	
 	public EclipseG() {
@@ -100,6 +102,7 @@ public class EclipseG {
     	for(int i = 0; i < circles.length;i++) {
     		circles[i].setVisible(false);
     	}
+    	twinkle = false;
     }
     @FXML
     void left(ActionEvent event) {
@@ -120,12 +123,24 @@ public class EclipseG {
     	
     	if(newMoon.getxPositionMoon() >= sun.getLayoutX() && newMoon.getxPositionMoon() < sun.getLayoutX()+sun.getRadius()) {
     		color = color.darker();
-    		for(int i = 0; i < circles.length;i++) {
-        		circles[i].setVisible(true);
-        	}
+			if(twinkle == true) {
+			twinkle=false;
+			for(int i = 0; i < circles.length;i++) {
+			circles[i].setVisible(true);
+			}
+			}
+			else {
+				twinkle=true;
+				for(int i = 0; i < circles.length;i++) {
+				circles[i].setVisible(false);
+				}
+		}
     	}
     	else {
     		color = color.brighter();
+    		for(int i = 0; i < circles.length;i++) {
+        		circles[i].setVisible(false);
+        	}
     	}
     	
     	sky.setFill(color);
@@ -150,12 +165,25 @@ public class EclipseG {
 
     	if(newMoon.getxPositionMoon() <= sun.getLayoutX() && newMoon.getxPositionMoon()>sun.getLayoutX()-sun.getRadius()) {
     		color = color.darker();
-    		for(int i = 0; i < circles.length;i++) {
-        		circles[i].setVisible(true);
-        	}
+    			if(twinkle == true) {
+    			twinkle=false;
+    			for(int i = 0; i < circles.length;i++) {
+    			circles[i].setVisible(true);
+    			}
+    			}
+    			else {
+    				twinkle=true;
+    				for(int i = 0; i < circles.length;i++) {
+    				circles[i].setVisible(false);
+    				}
+    		}
     	}
     	else {
     		color = color.brighter();
+    		for(int i = 0; i < circles.length;i++) {
+        		
+    			circles[i].setVisible(false);
+        	}
     	}
     	
     	sky.setFill(color);

@@ -30,6 +30,63 @@ public class EclipseG {
 	@FXML
 	private Color color;
 	
+	//Starts
+	
+	@FXML
+    private Circle start1;
+
+    @FXML
+    private Circle start2;
+	
+    @FXML
+    private Circle start3;
+
+    @FXML
+    private Circle start4;
+
+    @FXML
+    private Circle start5;
+
+    @FXML
+    private Circle start6;
+
+    @FXML
+    private Circle start7;
+
+    @FXML
+    private Circle start8;
+
+    @FXML
+    private Circle start9;
+
+    @FXML
+    private Circle start10;
+    
+    @FXML
+    private Circle start11;
+    
+    @FXML
+    private Circle start12;
+    
+    @FXML
+    private Circle start13;
+    
+    @FXML
+    private Circle start14;
+    
+    @FXML
+    private Circle start15;
+
+    @FXML
+    private Circle start18;
+
+    @FXML
+    private Circle start16;
+
+    @FXML
+    private Circle start17;
+    
+	
 	public EclipseG() {
 		// TODO Auto-generated constructor stub
 	}

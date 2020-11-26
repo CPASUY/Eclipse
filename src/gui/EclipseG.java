@@ -90,7 +90,7 @@ public class EclipseG {
     
 	
 	public EclipseG() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	@FXML
     public void initialize() {

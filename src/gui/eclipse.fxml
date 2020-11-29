@@ -16,8 +16,8 @@
       <Circle fx:id="crater1" fill="#86979e" layoutX="141.0" layoutY="88.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater3" fill="#484c4d" layoutX="125.0" layoutY="139.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater2" fill="#636e72" layoutX="177.0" layoutY="119.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button layoutX="88.0" layoutY="290.0" mnemonicParsing="false" onAction="#left" text="moveLeft" />
-      <Button layoutX="901.0" layoutY="290.0" mnemonicParsing="false" onAction="#right" text="moveRight" />
+      <Button layoutX="88.0" layoutY="290.0" mnemonicParsing="false" onAction="#left" text="Stop" />
+      <Button layoutX="901.0" layoutY="290.0" mnemonicParsing="false" onAction="#right" text="Start" />
       <Circle fx:id="start1" fill="WHITE" layoutX="310.0" layoutY="90.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start3" fill="WHITE" layoutX="186.0" layoutY="251.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start2" fill="WHITE" layoutX="328.0" layoutY="190.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
@@ -36,7 +36,7 @@
       <Circle fx:id="start12" fill="WHITE" layoutX="920.0" layoutY="416.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start11" fill="WHITE" layoutX="712.0" layoutY="399.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start13" fill="WHITE" layoutX="857.0" layoutY="381.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
-      <Slider fx:id="velocity" layoutX="892.0" layoutY="14.0" majorTickUnit="10.0" max="50.0" minorTickCount="5" showTickLabels="true" />
+      <Slider fx:id="velocity" blockIncrement="1.0" layoutX="892.0" layoutY="14.0" majorTickUnit="10.0" max="10.0" minorTickCount="5" showTickLabels="true" />
       <Text layoutX="822.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VELOCITY:" />
       <Circle fx:id="planet4" fill="#397dbc" layoutX="401.0" layoutY="278.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="planet1" fill="#1f4d79" layoutX="358.0" layoutY="22.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />

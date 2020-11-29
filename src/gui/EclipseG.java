@@ -115,6 +115,7 @@ public class EclipseG {
     
     private Circle[] planets;
     
+    private boolean movement;
     
     
 	
@@ -137,52 +138,15 @@ public class EclipseG {
     }
     @FXML
     void left(ActionEvent event) {
-    	valueSlider = velocity.getValue();
-    	moon.setLayoutX(moon.getLayoutX() - valueSlider);
-    	crater1.setLayoutX(crater1.getLayoutX()-valueSlider);
-    	crater2.setLayoutX(crater2.getLayoutX()-valueSlider);
-    	crater3.setLayoutX(crater3.getLayoutX()-valueSlider);
-    	
-    	if(moon.getLayoutX()<-100) {
-    		moon.setLayoutX(1069+150);
-    		crater1.setLayoutX(1069+150+(180-141));
-    		crater2.setLayoutX(1069+150+(180-177));
-    		crater3.setLayoutX(1069+150+(180-125));
-    	}
-    	
-    	if(moon.getLayoutX() >= sun.getLayoutX() && moon.getLayoutX() < sun.getLayoutX()+sun.getRadius()) {
-    		color = color.darker();
-    		for(int i = 0; i < planets.length;i++) {
-        		planets[i].setVisible(true);
-        	}
-			if(twinkle == true) {
-			twinkle=false;
-			for(int i = 0; i < circles.length;i++) {
-			circles[i].setVisible(true);
-			}
-			}
-			else {
-				twinkle=true;
-				for(int i = 0; i < circles.length;i++) {
-				circles[i].setVisible(false);
-				}
-		}
-    	}
-    	else {
-    		color = color.brighter();
-    		for(int i = 0; i < planets.length;i++) {
-        		planets[i].setVisible(false);
-        	}
-    		for(int i = 0; i < circles.length;i++) {
-        		circles[i].setVisible(false);
-        	}
-    	}
-    	
-    	sky.setFill(color);
+    	movement = false;
     }
 
     @FXML
     void right(ActionEvent event) {
+    	movement = true;
+    	new Thread() {
+    		public void run() {
+    	while(movement) {
     	valueSlider = velocity.getValue();
     	moon.setLayoutX(moon.getLayoutX() + valueSlider);
     	crater1.setLayoutX(crater1.getLayoutX()+valueSlider);
@@ -226,6 +190,14 @@ public class EclipseG {
     	}
     	
     	sky.setFill(color);
+    	try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+    	}
+    }
+    	}.start();
     }
 
 

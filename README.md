@@ -4,6 +4,9 @@ This program shows the progression of the moon heading towards the sun, thus for
 Collaborators:
 
 https://github.com/CPASUY
+
 https://github.com/JuanPalta
+
 https://github.com/juanmiloz
+
 https://github.com/rubyEstela

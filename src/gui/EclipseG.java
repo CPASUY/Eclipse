@@ -6,6 +6,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import threads.MovingThread;
 
 public class EclipseG {
 	
@@ -93,7 +94,11 @@ public class EclipseG {
     @FXML
     private Slider velocity;
     
-    private double valueSlider;
+    public boolean isMovement() {
+		return movement;
+	}
+
+	private double valueSlider;
     
     @FXML
     private Circle planet1;
@@ -117,7 +122,7 @@ public class EclipseG {
     
     private boolean movement;
     
-    
+    private MovingThread mt;
 	
 	public EclipseG() {
 	}
@@ -145,60 +150,54 @@ public class EclipseG {
     void start(ActionEvent event) {
     	if (movement == false){
     	movement = true;
-    	new Thread() {
-    		public void run() {
-    	while(movement) {
-    	valueSlider = velocity.getValue();
-    	moon.setLayoutX(moon.getLayoutX() + valueSlider);
-    	crater1.setLayoutX(crater1.getLayoutX()+valueSlider);
-    	crater2.setLayoutX(crater2.getLayoutX()+valueSlider);
-    	crater3.setLayoutX(crater3.getLayoutX()+valueSlider);
-    	
-    	if(moon.getLayoutX()>1069+100) {
-    		moon.setLayoutX(114-200);
-    		crater1.setLayoutX(141-200);
-    		crater2.setLayoutX(177-200);
-    		crater3.setLayoutX(125-200);
-    	}
+    	} 
+    	mt = new MovingThread(this);
+		mt.setDaemon(true);
+		mt.start();
+    }
+	public void movement() {
+	    	valueSlider = velocity.getValue();
+	    	moon.setLayoutX(moon.getLayoutX() + valueSlider);
+	    	crater1.setLayoutX(crater1.getLayoutX()+valueSlider);
+	    	crater2.setLayoutX(crater2.getLayoutX()+valueSlider);
+	    	crater3.setLayoutX(crater3.getLayoutX()+valueSlider);
+	    	
+	    	if(moon.getLayoutX()>1069+100) {
+	    		moon.setLayoutX(114-200);
+	    		crater1.setLayoutX(141-200);
+	    		crater2.setLayoutX(177-200);
+	    		crater3.setLayoutX(125-200);
+	    	}
 
-    	if(moon.getLayoutX() <= sun.getLayoutX() && moon.getLayoutX()>sun.getLayoutX()-sun.getRadius()) {
-    		color = color.darker();
-    		for(int i = 0; i < planets.length;i++) {
-        		planets[i].setVisible(true);
-        	}
-    			if(twinkle == true) {
-    			twinkle=false;
-    			for(int i = 0; i < circles.length;i++) {
-    			circles[i].setVisible(true);
-    			}
-    			}
-    			else {
-    				twinkle=true;
-    				for(int i = 0; i < circles.length;i++) {
-    				circles[i].setVisible(false);
-    				}
-    		}
-    	}
-    	else {
-    		color = color.brighter();
-    		for(int i = 0; i < planets.length;i++) {
-        		planets[i].setVisible(false);
-        	}
-    		for(int i = 0; i < circles.length;i++) {
-        		
-    			circles[i].setVisible(false);
-        	}
-    	}
-    	
-    	sky.setFill(color);
-    	try {
-			Thread.sleep(150);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-    	}
-    }
-    	}.start();
-    }
-    }
+	    	if(moon.getLayoutX() <= sun.getLayoutX() && moon.getLayoutX()>sun.getLayoutX()-sun.getRadius()) {
+	    		color = color.darker();
+	    		for(int i = 0; i < planets.length;i++) {
+	        		planets[i].setVisible(true);
+	        	}
+	    			if(twinkle == true) {
+	    			twinkle=false;
+	    			for(int i = 0; i < circles.length;i++) {
+	    			circles[i].setVisible(true);
+	    			}
+	    			}
+	    			else {
+	    				twinkle=true;
+	    				for(int i = 0; i < circles.length;i++) {
+	    				circles[i].setVisible(false);
+	    				}
+	    		}
+	    	}
+	    	else {
+	    		color = color.brighter();
+	    		for(int i = 0; i < planets.length;i++) {
+	        		planets[i].setVisible(false);
+	        	}
+	    		for(int i = 0; i < circles.length;i++) {
+	        		
+	    			circles[i].setVisible(false);
+	        	}
+	    	}
+	    	
+	    	sky.setFill(color);
+	}
 }

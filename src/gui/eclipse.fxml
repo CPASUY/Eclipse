@@ -36,7 +36,7 @@
       <Circle fx:id="start12" fill="WHITE" layoutX="920.0" layoutY="416.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start11" fill="WHITE" layoutX="712.0" layoutY="399.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start13" fill="WHITE" layoutX="857.0" layoutY="381.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
-      <Slider fx:id="velocity" blockIncrement="1.0" layoutX="892.0" layoutY="14.0" majorTickUnit="10.0" max="10.0" minorTickCount="5" showTickLabels="true" />
+      <Slider fx:id="velocity" blockIncrement="1.0" layoutX="892.0" layoutY="14.0" majorTickUnit="10.0" max="50.0" minorTickCount="5" showTickLabels="true" />
       <Text layoutX="822.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VELOCITY:" />
       <Circle fx:id="planet4" fill="#397dbc" layoutX="401.0" layoutY="278.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="planet1" fill="#1f4d79" layoutX="358.0" layoutY="22.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />

@@ -143,6 +143,7 @@ public class EclipseG {
 
     @FXML
     void start(ActionEvent event) {
+    	if (movement == false){
     	movement = true;
     	new Thread() {
     		public void run() {
@@ -199,6 +200,5 @@ public class EclipseG {
     }
     	}.start();
     }
-
-
+    }
 }

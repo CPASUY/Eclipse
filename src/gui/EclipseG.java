@@ -137,12 +137,12 @@ public class EclipseG {
     	twinkle = false;
     }
     @FXML
-    void left(ActionEvent event) {
+    void stop(ActionEvent event) {
     	movement = false;
     }
 
     @FXML
-    void right(ActionEvent event) {
+    void start(ActionEvent event) {
     	movement = true;
     	new Thread() {
     		public void run() {

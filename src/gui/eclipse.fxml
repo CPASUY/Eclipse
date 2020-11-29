@@ -16,8 +16,8 @@
       <Circle fx:id="crater1" fill="#86979e" layoutX="141.0" layoutY="88.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater3" fill="#484c4d" layoutX="125.0" layoutY="139.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="crater2" fill="#636e72" layoutX="177.0" layoutY="119.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button layoutX="88.0" layoutY="290.0" mnemonicParsing="false" onAction="#left" text="Stop" />
-      <Button layoutX="901.0" layoutY="290.0" mnemonicParsing="false" onAction="#right" text="Start" />
+      <Button layoutX="88.0" layoutY="290.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
+      <Button layoutX="901.0" layoutY="290.0" mnemonicParsing="false" onAction="#start" text="Start" />
       <Circle fx:id="start1" fill="WHITE" layoutX="310.0" layoutY="90.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start3" fill="WHITE" layoutX="186.0" layoutY="251.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start2" fill="WHITE" layoutX="328.0" layoutY="190.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />

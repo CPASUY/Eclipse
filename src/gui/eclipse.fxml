@@ -2,9 +2,11 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="mainPain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="1069.0" style="-fx-background-color: #f4ef58;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EclipseG">
    <children>
@@ -34,6 +36,16 @@
       <Circle fx:id="start12" fill="WHITE" layoutX="920.0" layoutY="416.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start11" fill="WHITE" layoutX="712.0" layoutY="399.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="start13" fill="WHITE" layoutX="857.0" layoutY="381.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Slider fx:id="velocity" layoutX="892.0" layoutY="14.0" majorTickUnit="10.0" max="50.0" minorTickCount="5" showTickLabels="true" />
+      <Text layoutX="822.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VELOCITY:" />
+      <Circle fx:id="planet4" fill="#397dbc" layoutX="401.0" layoutY="278.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet1" fill="#1f4d79" layoutX="358.0" layoutY="22.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet3" fill="#ff9d1f" layoutX="276.0" layoutY="242.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet7" fill="#ad5ceb" layoutX="342.0" layoutY="387.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet6" fill="#b8c8d7" layoutX="533.0" layoutY="344.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet5" fill="#1fffb9" layoutX="703.0" layoutY="223.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet2" fill="DODGERBLUE" layoutX="721.0" layoutY="62.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="planet8" fill="#a4720c" layoutX="568.0" layoutY="269.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

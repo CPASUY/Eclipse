@@ -2,10 +2,10 @@ package gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Slider;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import model.Moon;
 
 public class EclipseG {
 	
@@ -90,9 +90,35 @@ public class EclipseG {
     
     private boolean twinkle;
     
+    @FXML
+    private Slider velocity;
+    
+    private double valueSlider;
+    
+    @FXML
+    private Circle planet1;
+    
+    @FXML
+    private Circle planet2;
+    @FXML
+    private Circle planet3;
+    @FXML
+    private Circle planet4;
+    @FXML
+    private Circle planet5;
+    @FXML
+    private Circle planet6;
+    @FXML
+    private Circle planet7;
+    @FXML
+    private Circle planet8;
+    
+    private Circle[] planets;
+    
+    
+    
 	
 	public EclipseG() {
-		
 	}
 	@FXML
     public void initialize() {
@@ -102,17 +128,20 @@ public class EclipseG {
     	for(int i = 0; i < circles.length;i++) {
     		circles[i].setVisible(false);
     	}
+    	Circle[] circles3 = {planet1,planet2,planet3,planet4,planet5,planet6,planet7,planet8};
+    	planets =circles3;
+    	for(int j = 0; j < planets.length;j++) {
+    		planets[j].setVisible(false);
+    	}
     	twinkle = false;
     }
     @FXML
     void left(ActionEvent event) {
-    	Moon newMoon = new Moon(moon.getLayoutX(), crater1.getLayoutX(),crater2.getLayoutX(),crater3.getLayoutX());
-    	newMoon.moveLeft();
-    	
-    	moon.setLayoutX(moon.getLayoutX() - 10);
-    	crater1.setLayoutX(crater1.getLayoutX()-10);
-    	crater2.setLayoutX(crater2.getLayoutX()-10);
-    	crater3.setLayoutX(crater3.getLayoutX()-10);
+    	valueSlider = velocity.getValue();
+    	moon.setLayoutX(moon.getLayoutX() - valueSlider);
+    	crater1.setLayoutX(crater1.getLayoutX()-valueSlider);
+    	crater2.setLayoutX(crater2.getLayoutX()-valueSlider);
+    	crater3.setLayoutX(crater3.getLayoutX()-valueSlider);
     	
     	if(moon.getLayoutX()<-100) {
     		moon.setLayoutX(1069+150);
@@ -121,8 +150,11 @@ public class EclipseG {
     		crater3.setLayoutX(1069+150+(180-125));
     	}
     	
-    	if(newMoon.getxPositionMoon() >= sun.getLayoutX() && newMoon.getxPositionMoon() < sun.getLayoutX()+sun.getRadius()) {
+    	if(moon.getLayoutX() >= sun.getLayoutX() && moon.getLayoutX() < sun.getLayoutX()+sun.getRadius()) {
     		color = color.darker();
+    		for(int i = 0; i < planets.length;i++) {
+        		planets[i].setVisible(true);
+        	}
 			if(twinkle == true) {
 			twinkle=false;
 			for(int i = 0; i < circles.length;i++) {
@@ -138,6 +170,9 @@ public class EclipseG {
     	}
     	else {
     		color = color.brighter();
+    		for(int i = 0; i < planets.length;i++) {
+        		planets[i].setVisible(false);
+        	}
     		for(int i = 0; i < circles.length;i++) {
         		circles[i].setVisible(false);
         	}
@@ -148,13 +183,11 @@ public class EclipseG {
 
     @FXML
     void right(ActionEvent event) {
-    	Moon newMoon = new Moon(moon.getLayoutX(), crater1.getLayoutX(),crater2.getLayoutX(),crater3.getLayoutX());
-    	newMoon.moveRight();
-    	
-    	moon.setLayoutX(moon.getLayoutX() + 10);
-    	crater1.setLayoutX(crater1.getLayoutX()+10);
-    	crater2.setLayoutX(crater2.getLayoutX()+10);
-    	crater3.setLayoutX(crater3.getLayoutX()+10);
+    	valueSlider = velocity.getValue();
+    	moon.setLayoutX(moon.getLayoutX() + valueSlider);
+    	crater1.setLayoutX(crater1.getLayoutX()+valueSlider);
+    	crater2.setLayoutX(crater2.getLayoutX()+valueSlider);
+    	crater3.setLayoutX(crater3.getLayoutX()+valueSlider);
     	
     	if(moon.getLayoutX()>1069+100) {
     		moon.setLayoutX(114-200);
@@ -163,8 +196,11 @@ public class EclipseG {
     		crater3.setLayoutX(125-200);
     	}
 
-    	if(newMoon.getxPositionMoon() <= sun.getLayoutX() && newMoon.getxPositionMoon()>sun.getLayoutX()-sun.getRadius()) {
+    	if(moon.getLayoutX() <= sun.getLayoutX() && moon.getLayoutX()>sun.getLayoutX()-sun.getRadius()) {
     		color = color.darker();
+    		for(int i = 0; i < planets.length;i++) {
+        		planets[i].setVisible(true);
+        	}
     			if(twinkle == true) {
     			twinkle=false;
     			for(int i = 0; i < circles.length;i++) {
@@ -180,6 +216,9 @@ public class EclipseG {
     	}
     	else {
     		color = color.brighter();
+    		for(int i = 0; i < planets.length;i++) {
+        		planets[i].setVisible(false);
+        	}
     		for(int i = 0; i < circles.length;i++) {
         		
     			circles[i].setVisible(false);
